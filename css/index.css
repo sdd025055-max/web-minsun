@@ -2519,7 +2519,8 @@ section.Section2 {
 
 .Section2.Number {
   position: absolute;
-  top: 150px;
+  /* 150px at 1920, scales with the photo below it */
+  top: 7.8125vw;
   left: 50%;
   z-index: 2;
   display: flex;
@@ -2528,7 +2529,8 @@ section.Section2 {
   gap: 10px;
   color: #66666a;
   transform: translateX(-50%);
-  margin-left: 390px;
+  /* 390px at 1920 */
+  margin-left: 20.3125vw;
 }
 
 .Section2.Number h1 {
@@ -2558,7 +2560,8 @@ section.Section2 {
   font-size: clamp(15px, 1.35vw, 21px);
   line-height: 1.58;
   word-break: keep-all;
-  margin-left: 372px;
+  /* 372px at 1920 */
+  margin-left: 19.375vw;
   color: #000;
 }
 
@@ -2579,17 +2582,19 @@ section.Section2 {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  margin-left: 280px;
+  /* 280px at 1920 */
+  margin-left: 14.5833vw;
 }
 
 .Section2.caption {
   margin-top: 22px;
   text-align: center;
   font-size: clamp(16px, 1.3vw, 19px);
-  margin-left: 306px;
+  /* 306px / 537px at 1920 */
+  margin-left: 15.9375vw;
   display: flex;
   justify-content: space-between;
-  width: 537px;
+  width: 27.9688vw;
 }
 
 .Section2.caption strong {
@@ -2679,7 +2684,8 @@ section.Section2>div.Section3 {
   margin-top: var(--section3-gap);
   font-size: clamp(18px, 1.56vw, 22px);
   font-weight: 400;
-  line-height: min(1.900vw, 50px);
+  /* The vw value alone drops below the font size on narrower screens. */
+  line-height: max(1.45em, min(1.900vw, 50px));
   letter-spacing: 0.6px;
   word-break: keep-all;
 }
@@ -2695,7 +2701,7 @@ section.Section2>div.Section3 {
   margin-top: var(--section3-gap);
   font-size: clamp(20px, 1.67vw, 22px);
   font-weight: 400;
-  line-height: min(2.813vw, 54px);
+  line-height: max(1.5em, min(2.813vw, 54px));
 }
 
 .Section3.profile div {
@@ -2829,6 +2835,18 @@ section.Section2>div.Section3 {
 
   .Section2.Number {
     gap: 5px;
+    margin-left: 0;
+  }
+
+  .Section2.text,
+  .Section2.image img,
+  .Section2.caption {
+    margin-left: 0;
+  }
+
+  .Section2.caption {
+    width: 100%;
+    padding-inline: 6px;
   }
 
   .Section2.inside {
@@ -2932,6 +2950,125 @@ section.Section2>div.Section3 {
   }
 }
 
+/* Narrow desktop: keep the copy clear of the photo. */
+@media (min-width: 1101px) and (max-width: 1500px) {
+  .Section2.text {
+    width: 30vw;
+  }
+}
+
+/* Pad (651–1100px): the About intro flows as a two-column grid instead of absolute offsets. */
+@media (min-width: 651px) and (max-width: 1100px) {
+  section.Section2 {
+    --about-pad-gutter: clamp(32px, 6vw, 72px);
+    --section3-gap: clamp(36px, 5vw, 56px);
+    --section3-showcase-height: clamp(230px, 31vw, 320px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(28px, 5vw, 64px);
+    height: auto;
+    min-height: 0;
+    padding: clamp(88px, 11vw, 130px) var(--about-pad-gutter) clamp(90px, 11vw, 140px);
+  }
+
+  .Section2.Number {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    margin: 0 0 28px;
+    transform: none;
+  }
+
+  .Section2.inside {
+    display: contents;
+  }
+
+  .Section2.text {
+    position: static;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    width: auto;
+    margin: 0;
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.75;
+  }
+
+  .Section2.image {
+    position: static;
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+  }
+
+  .Section2.image img {
+    margin-left: 0;
+  }
+
+  .Section2.caption {
+    width: 100%;
+    margin: 16px 0 0;
+    padding-inline: 4%;
+    font-size: clamp(15px, 1.8vw, 17px);
+  }
+
+  section.Section2>div.Section3 {
+    position: relative;
+    top: auto;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    height: auto;
+    margin-top: clamp(72px, 10vw, 120px);
+  }
+
+  .Section3.inside {
+    height: auto;
+    padding: 0;
+  }
+
+  .Section3.pink-brush {
+    left: calc(var(--about-pad-gutter) * -1);
+    width: min(56vw, 520px);
+  }
+
+  .Section3.pink-c {
+    width: min(27vw, 280px);
+  }
+
+  .Section3.message {
+    left: calc(min(27vw, 280px) + 2%);
+    font-size: clamp(36px, 5.6vw, 58px);
+  }
+
+  .Section3.title {
+    font-size: clamp(22px, 2.9vw, 30px);
+  }
+
+  .Section3.intro {
+    width: min(58%, 520px);
+    font-size: clamp(16px, 1.9vw, 18px);
+    line-height: 1.8;
+  }
+
+  .Section3.intro p+p {
+    margin-top: 22px;
+  }
+
+  .Section3.profile {
+    width: min(100%, 440px);
+    font-size: clamp(16px, 1.9vw, 18px);
+    line-height: 1.9;
+  }
+
+  .Section3.profile div {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
 /* 402–650px: keep the Section 3 key visual in a horizontal composition. */
 @media (min-width: 402px) and (max-width: 650px) {
   section.Section2 {
@@ -2955,9 +3092,27 @@ section.Section2>div.Section3 {
     top: 50%;
     /* Starts after the C width, retaining a comfortable responsive gap. */
     left: calc(9% + clamp(120px, 23vw, 150px));
-    font-size: clamp(28px, 6.2vw, 40px);
+    font-size: clamp(26px, 6vw, 40px);
     line-height: 1.05;
     transform: translateY(-50%);
+  }
+}
+
+/* Small phones (≤401px): keep the one-line message inside the screen. */
+@media (max-width: 401px) {
+  .Section3.pink-c {
+    top: 34%;
+    width: 150px;
+  }
+
+  .Section3.message {
+    top: 80%;
+    left: 10%;
+    font-size: clamp(26px, 8.6vw, 34px);
+  }
+
+  .contact h2 {
+    font-size: clamp(44px, 16.4vw, 60px);
   }
 }
 

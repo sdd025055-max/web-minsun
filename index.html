@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./css/motion.css">
   <link rel="stylesheet" href="./css/about-rabbit.css">
   <link rel="stylesheet" href="./css/geulgil-case.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./css/project-design-system.css">
   <script>
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -26,6 +28,7 @@
   <script src="./js/motion.js" defer></script>
   <script src="./js/about-rabbit.js" defer></script>
   <script src="./js/geulgil-case.js" defer></script>
+  <script src="./js/project-design-system.js" defer></script>
 
   <title>백민선 | 웹디자이너 포트폴리오</title>
 
@@ -703,24 +706,43 @@
       </div>
     </header>
     <!-- GEULGIL PROJECT START -->
-    <section class="geulgil-project" id="geulgil-project" aria-labelledby="geulgil-project-title">
-      <header class="geulgil-cover">
+    <section class="geulgil-project project--geulgil" id="geulgil-project" aria-labelledby="geulgil-project-title">
+      <!-- 01 / Project intro -->
+      <header class="geulgil-intro">
         <div class="geulgil-container">
-          <div class="geulgil-cover__meta" data-geulgil-reveal>
-            <p class="geulgil-eyebrow">TEAM PROJECT / BOOK PLATFORM</p>
-            <span class="geulgil-brand" data-geulgil-logo="./img/GEULGIL-w.png" aria-hidden="true"></span>
+          <p class="geulgil-eyebrow geulgil-intro__type" data-geulgil-reveal>TEAM PROJECT / BOOK PLATFORM</p>
+          <div class="geulgil-intro__grid">
+            <h2 id="geulgil-project-title" class="geulgil-intro__title" data-geulgil-reveal>GEULGIL<span lang="ko">글길</span></h2>
+            <div class="geulgil-intro__copy" data-geulgil-reveal>
+              <p class="geulgil-intro__lead">책을 발견하고,<br>이야기를 나누는 공간.</p>
+              <p class="geulgil-intro__summary">취향에 맞는 한 권의 발견부터 <br class="geulgil-break">읽은 뒤의 이야기까지 연결하는 도서 플랫폼, 글길.</p>
+            </div>
           </div>
-          <h2 id="geulgil-project-title" data-geulgil-reveal>GEULGIL</h2>
-          <div class="geulgil-cover__copy" data-geulgil-reveal>
-            <p class="geulgil-cover__lead">책을 발견하고,<br>이야기를 나누는 공간.</p>
-            <p class="geulgil-cover__summary">취향에 맞는 한 권의 발견부터<br>읽은 뒤의 이야기까지 연결하는 도서 플랫폼, 글길.</p>
-          </div>
+          <dl class="geulgil-facts" data-geulgil-reveal>
+            <div>
+              <dt>유형</dt>
+              <dd>팀 프로젝트 · 도서 플랫폼</dd>
+            </div>
+            <div>
+              <dt>화면</dt>
+              <dd>메인 · 에디터 추천 · 도서 목록 · 도서 상세 · 로그인</dd>
+            </div>
+            <div>
+              <dt>구현</dt>
+              <dd>HTML · CSS · JavaScript</dd>
+            </div>
+            <div>
+              <dt>환경</dt>
+              <dd>PC · Tablet · Mobile</dd>
+            </div>
+          </dl>
         </div>
       </header>
 
-      <div class="geulgil-main">
+      <!-- 02 / Key visual -->
+      <div class="geulgil-hero">
         <div class="geulgil-container">
-          <figure class="geulgil-main__screen" data-geulgil-reveal="image">
+          <figure class="geulgil-hero__figure" data-geulgil-reveal="image">
             <div class="geulgil-screen">
               <div class="geulgil-screen__bar" aria-hidden="true">
                 <span class="geulgil-screen__dots"><i></i><i></i><i></i></span>
@@ -728,86 +750,221 @@
                 <span>01</span>
               </div>
               <div class="geulgil-screen__image">
-                <picture>
-                  <source media="(max-width: 600px)" srcset="./img/geulgil/home-mobile.jpg" width="390" height="790">
-                  <img src="./img/geulgil/home.jpg" alt="글길 메인 화면: 오늘의 추천도서 배너와 신간, 베스트, 테마별 도서를 탐색하는 카테고리" width="1440"
-                    height="1180" loading="lazy" decoding="async">
-                </picture>
+                <img src="./img/geulgil/home.jpg" alt="글길 메인 화면: 오늘의 추천도서 배너와 신간, 베스트, 테마별 도서를 탐색하는 카테고리" width="1440"
+                  height="1180" loading="lazy" decoding="async">
               </div>
             </div>
-            <figcaption class="geulgil-main__caption"><span>BOOK DISCOVERY</span><span>취향을 발견하는 첫 화면</span></figcaption>
+            <figcaption class="geulgil-hero__caption"><span>BOOK DISCOVERY</span><span>취향을 발견하는 첫 화면</span></figcaption>
           </figure>
         </div>
       </div>
 
-      <div class="geulgil-showcase">
+      <!-- 03 / Brand & design concept: color and typography in detail -->
+      <div class="geulgil-concept">
         <div class="geulgil-container">
-          <div class="geulgil-showcase__heading" data-geulgil-reveal>
-            <p class="geulgil-eyebrow">A CLOSER LOOK / DESIGN HIGHLIGHTS</p>
-            <h3>다음에 읽을 책을 만나는,<br>나만의 새로운 길.</h3>
+          <div class="geulgil-concept__heading" data-geulgil-reveal>
+            <p class="geulgil-eyebrow">BRAND &amp; DESIGN CONCEPT</p>
+            <h3>표지는 선명하게,<br><em>정보는 간결하게.</em></h3>
+            <p class="geulgil-concept__lead">책을 고르는 시간이 편안하도록, 네이비 블루 한 가지 색과 Pretendard 한 가지 서체로 화면의 톤을 정리했습니다.<br class="geulgil-break">
+              표지 이미지가 가장 먼저 보이도록 나머지는 화이트와 그레이로 비웠습니다.</p>
           </div>
-          <div class="geulgil-showcase__grid">
-            <figure class="geulgil-feature" data-geulgil-reveal="image">
-              <div class="geulgil-feature__visual">
+
+          <div class="geulgil-concept__grid">
+            <figure class="geulgil-concept__image" data-geulgil-reveal="image">
+              <img src="./img/geulgil/concept-books.jpg" alt="글길 메인 배너의 추천 도서 표지와 책, 커피가 놓인 이미지" width="778" height="570"
+                loading="lazy" decoding="async">
+            </figure>
+            <div class="geulgil-concept__words" data-geulgil-reveal>
+              <div>
+                <h4>Navy.</h4>
+                <p>로그인·구매 버튼과 가격에만 쓰는 하나의 브랜드 컬러</p>
+              </div>
+              <div>
+                <h4>Quiet.</h4>
+                <p>화이트와 그레이로 비워 둔 배경, 표지가 주인공이 되는 화면</p>
+              </div>
+              <div>
+                <h4>Readable.</h4>
+                <p>Pretendard 하나로 맞춘 제목과 본문, 두 가지 두께의 분명한 위계</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="geulgil-palette" aria-label="글길 디자인 색상" data-geulgil-reveal>
+            <div class="geulgil-palette__navy"><span>Navy Blue</span><small>#3A3B81</small></div>
+            <div class="geulgil-palette__lavender"><span>Lavender</span><small>#C5C6E2</small></div>
+            <div class="geulgil-palette__white"><span>White</span><small>#FFFFFF</small></div>
+            <div class="geulgil-palette__gray"><span>Light Gray</span><small>#F7F7F7</small></div>
+            <div class="geulgil-palette__ink"><span>Ink</span><small>#111111</small></div>
+          </div>
+
+          <div class="geulgil-type" data-geulgil-reveal>
+            <div class="geulgil-type__font">
+              <p class="geulgil-eyebrow">TYPOGRAPHY</p>
+              <p class="geulgil-type__sample" aria-hidden="true">Aa</p>
+              <h4>Pretendard</h4>
+              <p>모든 화면에 Pretendard 한 가지 서체를 사용했습니다. Regular 400은 본문과 정보에, Bold 700은 제목과 강조에 써서 두께만으로 위계를 나눴습니다.</p>
+              <p class="geulgil-type__weights"><span>Regular 400</span><span>Bold 700</span></p>
+            </div>
+            <div class="geulgil-type__scale">
+              <p class="geulgil-type__note">기본 크기 PC 16px · Pad 14px · Mobile 12px, 1.25배 간격의 타입 스케일</p>
+              <ul>
+                <li><span class="geulgil-type__label">H1<small>2.44rem</small></span><span class="geulgil-type__text geulgil-type__text--h1">다음에 읽을 책</span></li>
+                <li><span class="geulgil-type__label">H2<small>1.95rem</small></span><span class="geulgil-type__text geulgil-type__text--h2">다음에 읽을 책</span></li>
+                <li><span class="geulgil-type__label">H3<small>1.56rem</small></span><span class="geulgil-type__text geulgil-type__text--h3">다음에 읽을 책</span></li>
+                <li><span class="geulgil-type__label">H4<small>1.25rem</small></span><span class="geulgil-type__text geulgil-type__text--h4">다음에 읽을 책</span></li>
+                <li><span class="geulgil-type__label">Body<small>1rem</small></span><span class="geulgil-type__text geulgil-type__text--body">책을 발견하고, 이야기를 나누는 공간.</span></li>
+                <li><span class="geulgil-type__label">Detail<small>0.72rem</small></span><span class="geulgil-type__text geulgil-type__text--detail">책을 발견하고, 이야기를 나누는 공간.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="geulgil-concept__principles" data-geulgil-reveal>
+            <p><strong>BOOK DISCOVERY</strong><span>취향을 발견하는 첫 화면</span></p>
+            <p><strong>CURATED CONTENT</strong><span>취향의 폭을 넓히는 에디터의 제안</span></p>
+            <p><strong>READING EXPERIENCE</strong><span>책의 정보에서 읽는 경험으로, 자연스럽게</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESIGN SYSTEM: shared component. Brand data lives in css/project-design-system.css (--geulgil). -->
+      <section class="project-design-system project-design-system--geulgil" aria-labelledby="geulgil-ds-title">
+        <div class="design-system__inner">
+          <h3 class="design-system__title" id="geulgil-ds-title" data-ds-reveal>DESIGN SYSTEM</h3>
+          <div class="design-system__layout">
+            <div class="design-system__colors">
+              <h4 class="design-system__label" data-ds-reveal>COLOR PALETTE</h4>
+              <div class="design-system__main" data-ds-reveal>
+                <span class="design-system__main-tag">MAIN</span>
+                <p class="design-system__main-info"><strong>Navy Blue</strong><span class="design-system__hex">#3A3B81</span></p>
+              </div>
+              <ul class="design-system__palette" aria-label="글길 서브 컬러" data-ds-reveal="palette">
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#C5C6E2</span><span class="design-system__chip-name">Blue 100</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#454697</span><span class="design-system__chip-name">Blue 600</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#323377</span><span class="design-system__chip-name">Blue 700</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#212252</span><span class="design-system__chip-name">Blue 800</span></li>
+              </ul>
+              <div class="design-system__summary" data-ds-reveal>
+                <h5>COLOR CONCEPT SUMMARY</h5>
+                <p>공통 스타일에 정의한 브랜드 컬러 Navy Blue와 Blue 0–900 단계 컬러입니다. 로그인·구매 버튼과 가격 강조에는 네이비 블루 계열을 사용하고, 나머지 화면은 화이트와 그레이 톤으로 비워 도서 표지가 먼저 보이도록 했습니다.</p>
+              </div>
+            </div>
+            <div class="design-system__typography">
+              <h4 class="design-system__label" data-ds-reveal>FONTSTYLE</h4>
+              <div class="design-system__fonts">
+                <div class="design-system__font design-system__font--1" data-ds-reveal="font">
+                  <p class="design-system__font-sample" aria-hidden="true">Aa</p>
+                  <h5 class="design-system__font-name">Pretendard</h5>
+                  <p class="design-system__font-role">MAIN FONT · 전체 화면 기본 서체</p>
+                  <p class="design-system__font-description">Regular 400과 Bold 700 두 가지 두께, PC 16px · Pad 14px · Mobile 12px 기준 크기로 제목과 본문의 위계를 정리했습니다.</p>
+                  <p class="design-system__font-specimen">책을 발견하고, 이야기를 나누는 공간.</p>
+                  <p class="design-system__font-weights"><span>Regular 400</span><span>Bold 700</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="design-system__actions" data-ds-reveal>
+            <a class="project-figma" data-figma-project="geulgil" role="link" aria-disabled="true" tabindex="0"
+              aria-describedby="geulgil-figma-status"><span class="project-figma__label">FIGMA PREVIEW</span><span
+                class="project-figma__arrow" aria-hidden="true">↗</span></a>
+            <p class="project-figma__status" id="geulgil-figma-status">Figma 링크 준비 중</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 / Website result -->
+      <div class="geulgil-results">
+        <div class="geulgil-container">
+          <div class="geulgil-results__heading" data-geulgil-reveal>
+            <p class="geulgil-eyebrow">WEBSITE RESULT</p>
+            <h3>발견에서 구매까지,<br>글길의 주요 화면.</h3>
+          </div>
+          <div class="geulgil-results__grid">
+            <figure class="geulgil-shot geulgil-shot--curator" data-geulgil-reveal="image">
+              <div class="geulgil-shot__visual">
                 <div class="geulgil-screen">
                   <div class="geulgil-screen__bar" aria-hidden="true">
                     <span class="geulgil-screen__dots"><i></i><i></i><i></i></span>
                     <span>EDITOR'S PICK</span><span>02</span>
                   </div>
                   <div class="geulgil-screen__image">
-                    <picture>
-                      <source media="(max-width: 600px)" srcset="./img/geulgil/curator-mobile.jpg" width="390"
-                        height="650">
-                      <img src="./img/geulgil/curator.jpg" alt="글길 에디터 추천 화면: 에디터 픽, 오디오북, 지금 읽을 책을 이미지 중심으로 소개하는 큐레이션"
-                        width="1440" height="1200" loading="lazy" decoding="async">
-                    </picture>
+                    <img src="./img/geulgil/curator.jpg" alt="글길 에디터 추천 화면: 에디터 픽, 오디오북, 지금 읽을 책을 이미지 중심으로 소개하는 큐레이션"
+                      width="1440" height="1200" loading="lazy" decoding="async">
                   </div>
                 </div>
               </div>
-              <figcaption class="geulgil-feature__caption">
-                <span class="geulgil-feature__number">02</span>
+              <figcaption class="geulgil-shot__caption">
+                <span class="geulgil-shot__number">02</span>
                 <div>
                   <h4>CURATED CONTENT</h4>
                   <p>취향의 폭을 넓히는 에디터의 제안.</p>
                 </div>
               </figcaption>
             </figure>
-            <div class="geulgil-feature geulgil-feature--detail">
-              <figure data-geulgil-reveal="image">
-                <div class="geulgil-feature__visual">
-                  <div class="geulgil-screen">
-                    <div class="geulgil-screen__bar" aria-hidden="true">
-                      <span class="geulgil-screen__dots"><i></i><i></i><i></i></span>
-                      <span>BOOK DETAIL</span><span>03</span>
-                    </div>
-                    <div class="geulgil-screen__image">
-                      <picture>
-                        <source media="(max-width: 600px)" srcset="./img/geulgil/shopping-purchase-mobile.jpg"
-                          width="390" height="700">
-                        <img src="./img/geulgil/shopping-purchase.jpg"
-                          alt="글길 슈퍼호스트 도서 상세 화면: 평점, 도서 정보와 구매 버튼을 정돈한 인터페이스" width="1440" height="1100" loading="lazy"
-                          decoding="async">
-                      </picture>
-                    </div>
+            <figure class="geulgil-shot geulgil-shot--detail" data-geulgil-reveal="image">
+              <div class="geulgil-shot__visual">
+                <div class="geulgil-screen">
+                  <div class="geulgil-screen__bar" aria-hidden="true">
+                    <span class="geulgil-screen__dots"><i></i><i></i><i></i></span>
+                    <span>BOOK DETAIL</span><span>03</span>
+                  </div>
+                  <div class="geulgil-screen__image">
+                    <img src="./img/geulgil/shopping-purchase.jpg" alt="글길 슈퍼호스트 도서 상세 화면: 평점, 도서 정보와 구매 버튼을 정돈한 인터페이스"
+                      width="1440" height="1100" loading="lazy" decoding="async">
                   </div>
                 </div>
-                <figcaption class="geulgil-feature__caption">
-                  <span class="geulgil-feature__number">03</span>
-                  <div>
-                    <h4>READING EXPERIENCE</h4>
-                    <p>책의 정보에서 읽는 경험으로, 자연스럽게.</p>
-                  </div>
-                </figcaption>
-              </figure>
-              <div class="geulgil-feature__note" data-geulgil-reveal>
-                <span class="geulgil-eyebrow">THOUGHTFUL &amp; INTUITIVE</span>
-                <p>표지는 선명하게, 정보는 간결하게.</p>
               </div>
-            </div>
+              <figcaption class="geulgil-shot__caption">
+                <span class="geulgil-shot__number">03</span>
+                <div>
+                  <h4>READING EXPERIENCE</h4>
+                  <p>책의 정보에서 읽는 경험으로, 자연스럽게.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="geulgil-shot geulgil-shot--list" data-geulgil-reveal="image">
+              <div class="geulgil-shot__visual">
+                <div class="geulgil-screen">
+                  <div class="geulgil-screen__bar" aria-hidden="true">
+                    <span class="geulgil-screen__dots"><i></i><i></i><i></i></span>
+                    <span>BOOK LIST</span><span>04</span>
+                  </div>
+                  <div class="geulgil-screen__image">
+                    <img src="./img/geulgil/shopping-list.jpg" alt="글길 도서 목록 화면: 소설 장르의 도서를 표지 중심의 그리드로 정리한 목록" width="1440"
+                      height="1160" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+              <figcaption class="geulgil-shot__caption">
+                <span class="geulgil-shot__number">04</span>
+                <div>
+                  <h4>BOOK LIST</h4>
+                  <p>표지는 선명하게, 정보는 간결하게.</p>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="geulgil-shot geulgil-shot--mobile" data-geulgil-reveal="image">
+              <div class="geulgil-mobiles">
+                <img src="./img/geulgil/home-mobile.jpg" alt="글길 모바일 메인 화면" width="390" height="790" loading="lazy"
+                  decoding="async">
+                <img src="./img/geulgil/curator-mobile.jpg" alt="글길 모바일 에디터 추천 화면" width="390" height="650"
+                  loading="lazy" decoding="async">
+                <img src="./img/geulgil/shopping-purchase-mobile.jpg" alt="글길 모바일 도서 상세 화면" width="390" height="700"
+                  loading="lazy" decoding="async">
+              </div>
+              <figcaption class="geulgil-shot__caption">
+                <span class="geulgil-shot__number">05</span>
+                <div>
+                  <h4>MOBILE</h4>
+                  <p>메인 · 에디터 추천 · 도서 상세의 모바일 화면.</p>
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
 
+      <!-- 06 / Project link -->
       <div class="geulgil-outro">
         <div class="geulgil-container geulgil-outro__inner" data-geulgil-reveal>
           <div class="geulgil-outro__brand">
@@ -956,6 +1113,59 @@
           </div>
         </div>
       </article>
+
+      <!-- DESIGN SYSTEM: shared component. Brand data lives in css/project-design-system.css (--lumora). -->
+      <section class="project-design-system project-design-system--lumora" aria-labelledby="lumora-ds-title">
+        <div class="design-system__inner">
+          <h3 class="design-system__title" id="lumora-ds-title" data-ds-reveal>DESIGN SYSTEM</h3>
+          <div class="design-system__layout">
+            <div class="design-system__colors">
+              <h4 class="design-system__label" data-ds-reveal>COLOR PALETTE</h4>
+              <div class="design-system__main" data-ds-reveal>
+                <span class="design-system__main-tag">MAIN</span>
+                <p class="design-system__main-info"><strong>Lumora Gold</strong><span class="design-system__hex">#A49E6D</span></p>
+              </div>
+              <ul class="design-system__palette" aria-label="루모라 서브 컬러" data-ds-reveal="palette">
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#FCF8EE</span><span class="design-system__chip-name">Cream</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#E7E1D7</span><span class="design-system__chip-name">Line Beige</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#8F885A</span><span class="design-system__chip-name">Deep Gold</span></li>
+                <li class="design-system__chip"><span class="design-system__swatch" aria-hidden="true"></span><span class="design-system__hex">#26231F</span><span class="design-system__chip-name">Ink</span></li>
+              </ul>
+              <div class="design-system__summary" data-ds-reveal>
+                <h5>COLOR CONCEPT SUMMARY</h5>
+                <p>사이트 공통 변수로 정의한 크림 배경과 골드 포인트 컬러입니다. 햇살을 닮은 크림과 베이지를 바탕으로 깔고, 골드는 강조 문구와 메뉴 Hover 같은 포인트에만 사용해 가구와 공간의 분위기가 먼저 보이도록 했습니다.</p>
+              </div>
+            </div>
+            <div class="design-system__typography">
+              <h4 class="design-system__label" data-ds-reveal>FONTSTYLE</h4>
+              <div class="design-system__fonts">
+                <div class="design-system__font design-system__font--1" data-ds-reveal="font">
+                  <p class="design-system__font-sample" aria-hidden="true">Aa</p>
+                  <h5 class="design-system__font-name">Noto Sans KR</h5>
+                  <p class="design-system__font-role">MAIN FONT · 메인 · 컬렉션 기본 서체</p>
+                  <p class="design-system__font-description">메인과 컬렉션 화면 전체에 사용한 기본 서체입니다. 300–700 웨이트로 메뉴, 상품명, 본문의 위계를 나눴습니다.</p>
+                  <p class="design-system__font-specimen">가구를 고르는 순간도, 편안한 경험이 되도록.</p>
+                  <p class="design-system__font-weights"><span>Regular 400</span><span>Bold 700</span></p>
+                </div>
+                <div class="design-system__font design-system__font--2" data-ds-reveal="font">
+                  <p class="design-system__font-sample" aria-hidden="true">Aa</p>
+                  <h5 class="design-system__font-name">Pretendard</h5>
+                  <p class="design-system__font-role">SUB FONT · 상품 상세 서체</p>
+                  <p class="design-system__font-description">상품 상세 페이지의 기본 서체입니다. 가격, 옵션, 리뷰처럼 정보가 많은 영역을 또렷하게 정리했습니다.</p>
+                  <p class="design-system__font-specimen">마음에 든 가구를, 조금 더 가까이.</p>
+                  <p class="design-system__font-weights"><span>Regular 400</span><span>Bold 700</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="design-system__actions" data-ds-reveal>
+            <a class="project-figma" data-figma-project="lumora" role="link" aria-disabled="true" tabindex="0"
+              aria-describedby="lumora-figma-status"><span class="project-figma__label">FIGMA PREVIEW</span><span
+                class="project-figma__arrow" aria-hidden="true">↗</span></a>
+            <p class="project-figma__status" id="lumora-figma-status">Figma 링크 준비 중</p>
+          </div>
+        </div>
+      </section>
 
       <!-- 04 / Key screens -->
       <article class="lumora-scene lumora-scene--white lumora-screens" id="lumora-screens"
