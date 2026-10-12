@@ -7,10 +7,10 @@
    비어 있으면 버튼은 '준비 중' 상태로 표시되고 이동하지 않습니다. */
 const projectLinks = {
   geulgil: {
-    figma: ""
+    figma: "https://www.figma.com/design/9GeJgJnxfVXzsghx9NiBEo/GEULGIL-%EC%87%BC%ED%95%91%EB%AA%B0-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=1-3&t=GPFE6wad5xObMgGE-1"
   },
   lumora: {
-    figma: ""
+    figma: "https://www.figma.com/design/ACmdALttw4UHe4GCFXw77x/LUMORA-%EC%87%BC%ED%95%91%EB%AA%B0-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=19-1723&t=zDvIImDPnSzWiKAE-1"
   }
 };
 

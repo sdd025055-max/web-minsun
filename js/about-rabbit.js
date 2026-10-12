@@ -21,13 +21,23 @@
     titleRange.selectNodeContents(title);
     const heading = titleRange.getBoundingClientRect();
     const top = mobile ? copy.bottom + 5 : heading.bottom + 8;
-    const bottom = details.top - (mobile ? 5 : 16);
+    const bottom = mobile
+      ? profile.lastElementChild.getBoundingClientRect().top - 12
+      : details.top - 16;
     const height = Math.max(0, bottom - top);
-    const preferredSize = mobile ? 76 : innerWidth <= 1100
+    const preferredSize = mobile ? Math.min(300, innerWidth * .68) : innerWidth <= 1100
       ? Math.min(400, Math.max(300, innerWidth * .32))
       : Math.min(560, Math.max(430, innerWidth * .30));
     const size = Math.min(preferredSize, height / .84);
-    const availableWidth = mobile ? 76 : Math.max(0, parent.right - copy.right - 24);
+    const profileTextRight = mobile ? Math.max(...[...profile.querySelectorAll('dd')].slice(0, -1).map(element => {
+      const range = document.createRange();
+      range.selectNodeContents(element);
+      const entranceOffset = parseFloat(getComputedStyle(element.parentElement).translate) || 0;
+      return range.getBoundingClientRect().right - entranceOffset;
+    })) : 0;
+    const availableWidth = mobile
+      ? Math.max(0, parent.right - profileTextRight - 12)
+      : Math.max(0, parent.right - copy.right - 24);
     const width = Math.min(availableWidth, size * .78);
     windowElement.style.setProperty('--about-rabbit-top', `${top - parent.top}px`);
     windowElement.style.setProperty('--about-rabbit-height', `${height}px`);

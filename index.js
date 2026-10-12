@@ -232,18 +232,31 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!viewport || !cards.length) return;
 
   const track = viewport.querySelector(".banner-carousel__track");
-  const visualCards = [...cards];
+  if (!track) return;
+  const duplicateCard = (card) => {
+    const duplicate = card.cloneNode(true);
+    duplicate.classList.add("banner-card--duplicate");
+    duplicate.setAttribute("aria-hidden", "true");
+    return duplicate;
+  };
+  track.prepend(...cards.map(duplicateCard));
+  track.append(...cards.map(duplicateCard));
+  const visualCards = [...track.querySelectorAll(".banner-card")];
 
   let activeIndex = 0;
-  let visualIndex = 0;
+  let visualIndex = cards.length;
   let startX = 0;
   let startScrollLeft = 0;
   let isDragging = false;
   let isAnimating = false;
   let animationFrame;
+  let ready = false;
 
   const getSlideLeft = (card) => {
-    return card.offsetLeft - (viewport.clientWidth - card.clientWidth) / 2;
+    const cardRect = card.getBoundingClientRect();
+    const viewportRect = viewport.getBoundingClientRect();
+    return viewport.scrollLeft + cardRect.left - viewportRect.left - viewport.clientLeft
+      - (viewport.clientWidth - cardRect.width) / 2;
   };
 
   const clamp = (value) => Math.min(
@@ -261,6 +274,23 @@ document.addEventListener("DOMContentLoaded", () => {
     indicators.forEach((indicator, index) => {
       indicator.classList.toggle("is-active", index === activeIndex);
     });
+  };
+
+  const normalizePosition = () => {
+    const normalizedIndex = cards.length + (visualIndex % cards.length);
+    if (normalizedIndex === visualIndex) return;
+    // Identical neighbours surround both positions, so the reset is invisible.
+    const offset = viewport.scrollLeft - getSlideLeft(visualCards[visualIndex]);
+    visualIndex = normalizedIndex;
+    viewport.scrollTo({ left: getSlideLeft(visualCards[visualIndex]) + offset, behavior: "instant" });
+  };
+
+  const alignSlide = () => {
+    stopAnimation();
+    viewport.classList.add("is-settling");
+    visualIndex = cards.length + activeIndex;
+    viewport.scrollTo({ left: getSlideLeft(visualCards[visualIndex]), behavior: "instant" });
+    viewport.classList.remove("is-settling");
   };
 
   const easeInOut = (progress) => {
@@ -303,8 +333,8 @@ document.addEventListener("DOMContentLoaded", () => {
         animationFrame = window.requestAnimationFrame(animate);
       } else {
         isAnimating = false;
-        viewport.classList.remove("is-settling");
         onComplete?.();
+        viewport.classList.remove("is-settling");
       }
     };
     animationFrame = window.requestAnimationFrame(animate);
@@ -314,23 +344,12 @@ document.addEventListener("DOMContentLoaded", () => {
     visualIndex = Math.min(Math.max(index, 0), visualCards.length - 1);
     activeIndex = visualIndex % cards.length;
     updateIndicators();
-    animateToPosition(getSlideLeft(visualCards[visualIndex]));
+    animateToPosition(getSlideLeft(visualCards[visualIndex]), normalizePosition);
   };
 
   const advanceSlide = () => {
-    if (isDragging || isAnimating) return;
-
-    const nextVisualIndex = visualIndex + 1;
-    // Keep one banner ahead of the active banner so both adjacent previews are visible.
-    while (visualCards.length <= nextVisualIndex + 1) {
-      const sourceCard = cards[visualCards.length % cards.length];
-      const duplicate = sourceCard.cloneNode(true);
-      duplicate.classList.add("banner-card--duplicate");
-      duplicate.setAttribute("aria-hidden", "true");
-      track.append(duplicate);
-      visualCards.push(duplicate);
-    }
-    animateToSlide(nextVisualIndex);
+    if (!ready || isDragging || isAnimating || document.hidden) return;
+    animateToSlide(visualIndex + 1);
   };
 
   const closestIndex = () => visualCards.reduce((closest, card, index) => (
@@ -340,9 +359,12 @@ document.addEventListener("DOMContentLoaded", () => {
   ), 0);
 
   viewport.addEventListener("pointerdown", (event) => {
+    if (!ready) return;
     if (event.button !== 0 && event.pointerType === "mouse") return;
     stopAnimation();
     visualIndex = closestIndex();
+    viewport.classList.add("is-dragging");
+    normalizePosition();
     activeIndex = visualIndex % cards.length;
     updateIndicators();
     startX = event.clientX;
@@ -383,15 +405,50 @@ document.addEventListener("DOMContentLoaded", () => {
   let bannerTimer;
   const syncBannerMotion = () => {
     window.clearInterval(bannerTimer);
+    if (!ready) return;
     if (portfolioReducedMotion.matches) {
-      stopAnimation();
-      viewport.scrollLeft = getSlideLeft(visualCards[visualIndex]);
+      alignSlide();
     } else {
       bannerTimer = window.setInterval(advanceSlide, 4000);
     }
   };
   portfolioReducedMotion.addEventListener("change", syncBannerMotion);
-  syncBannerMotion();
+  // Position immediately, then remeasure once the actual image dimensions are ready.
+  alignSlide();
+  const imagesReady = [...track.querySelectorAll("img")].map((image) => {
+    if (image.decode) return image.decode().catch(() => {});
+    if (image.complete) return Promise.resolve();
+    return new Promise((resolve) => {
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", resolve, { once: true });
+    });
+  });
+  Promise.all(imagesReady).then(() => {
+    ready = true;
+    alignSlide();
+    syncBannerMotion();
+  });
+  if ("ResizeObserver" in window) {
+    const sizes = new ResizeObserver(() => {
+      if (!isDragging) alignSlide();
+    });
+    sizes.observe(viewport);
+    sizes.observe(cards[0]);
+  } else {
+    window.addEventListener("resize", () => { if (!isDragging) alignSlide(); });
+  }
+  window.addEventListener("pageshow", () => {
+    if (ready) { alignSlide(); syncBannerMotion(); }
+  });
+  viewport.addEventListener("scrollend", () => {
+    if (!ready || isDragging || isAnimating) return;
+    visualIndex = closestIndex();
+    activeIndex = visualIndex % cards.length;
+    viewport.classList.add("is-settling");
+    normalizePosition();
+    viewport.classList.remove("is-settling");
+    updateIndicators();
+  });
 });
 
 // Detail Page Designs: open the selected long-form detail in a scrollable modal.
