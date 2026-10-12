@@ -37,18 +37,21 @@
 
   function reveal() {
     windowElement.classList.add('is-revealed');
-    observer?.disconnect();
   }
 
   positionRabbit();
-  if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+  if (!('IntersectionObserver' in window)) {
     reveal();
   } else {
     // Observe the actual empty area; the full About section is several screens tall.
     observer = new IntersectionObserver((entries) => {
-      if (entries.some(entry => entry.isIntersecting && entry.intersectionRatio >= .25)) reveal();
-    }, { threshold: .25 });
+      entries.forEach(entry => {
+        if (reducedMotion.matches || (entry.isIntersecting && entry.intersectionRatio >= .25)) reveal();
+        else if (!entry.isIntersecting) windowElement.classList.remove('is-revealed');
+      });
+    }, { threshold: [0, .25] });
     observer.observe(windowElement);
+    if (reducedMotion.matches) reveal();
   }
 
   function schedulePosition() {

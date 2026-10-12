@@ -1,0 +1,8 @@
+:root { --lumora-cream:#fcf8ee; --lumora-gold:#a49e6d; --lumora-ink:#26231f; --lumora-line:#e7e1d7; }
+body { overflow-x:hidden; background:#fff; }
+.common-frame { width:min(1800px,calc(100% - 80px)); margin:0 auto; }
+.pc { display:block; }.pad,.mo { display:none; }
+a:focus-visible,button:focus-visible { outline:2px solid var(--lumora-gold); outline-offset:3px; }
+body.menu-open { overflow:hidden; }
+@media (max-width:1024px) { .common-frame { width:min(100% - 40px,960px); } }
+@media (max-width:768px) { .common-frame { width:calc(100% - 28px); } }

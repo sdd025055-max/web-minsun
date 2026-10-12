@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMORA 쇼핑몰 - 취업용 포트폴리오</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/minsun-chrome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <!-- PC용 헤더 -->
+    <header class="pc">
+        <div class="header-top">
+            <div class="common-frame">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.svg" alt="LUMORA 쇼핑몰 로고">
+                    </a>
+                </div>
+                <div class="lnb">
+                    <ul class="user-menu">
+                        <li>
+                            <a href="./login.html">
+                                <img src="./img/login-icon.svg" alt="로그인하기">
+                                <span>로그인</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./signup.html">
+                                <img src="./img/signup.svg" alt="회원가입하기">
+                                <span>회원가입</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./list.html">
+                                <img src="./img/search-icon.svg" alt="검색하기">
+                                <span>검색</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./product.html?view=cart">
+                                <img src="./img/cart.svg" alt="장바구니보기">
+                                <span>장바구니</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/my.svg" alt="마이페이지">
+                                <span>마이페이지</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="common-frame">
+                <ul class="gnb">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li>
+                        <a href="#">NEW</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">신상품 카테고리</a></h4>
+                                    <ul>
+                                        <li><a href="#">거실 신상품</a></li>
+                                        <li><a href="#">침실 신상품</a></li>
+                                        <li><a href="#">주방 신상품</a></li>
+                                        <li><a href="#">홈데코 신상품</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">출시 일정</a></h4>
+                                    <ul>
+                                        <li><a href="#">오늘 입고</a></li>
+                                        <li><a href="#">이번 주 신상품</a></li>
+                                        <li><a href="#">이번 달 신상품</a></li>
+                                        <li><a href="#">프리오더</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">신상품 기획전</a></h4>
+                                    <ul>
+                                        <li><a href="#">MD 추천 신상품</a></li>
+                                        <li><a href="#">단독 출시</a></li>
+                                        <li><a href="#">한정판</a></li>
+                                        <li><a href="#">NEW ARRIVAL</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">SHOP</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">베스트 카테고리</a></h4>
+                                    <ul>
+                                        <li><a href="#">소파 BEST</a></li>
+                                        <li><a href="#">침대 BEST</a></li>
+                                        <li><a href="#">의자 BEST</a></li>
+                                        <li><a href="#">조명 BEST</a></li>
+                                        <li><a href="#">테이블 BEST</a></li>
+                                        <li><a href="#">수납가구 BEST</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">인기순위</a></h4>
+                                    <ul>
+                                        <li><a href="#">TOP 10</a></li>
+                                        <li><a href="#">TOP 50</a></li>
+                                        <li><a href="#">실시간 인기</a></li>
+                                        <li><a href="#">고객 추천</a></li>
+                                        <li><a href="#">금주 인기</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">베스트 기획전</a></h4>
+                                    <ul>
+                                        <li><a href="#">MD 추천</a></li>
+                                        <li><a href="#">신혼 추천</a></li>
+                                        <li><a href="#">자취 추천</a></li>
+                                        <li><a href="#">프리미엄 컬렉션</a></li>
+                                        <li><a href="#">금주 인기</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">COLLECTION</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">시즌 컬렉션</a></h4>
+                                    <ul>
+                                        <li><a href="#">Spring Collection</a></li>
+                                        <li><a href="#">Summer Collection</a></li>
+                                        <li><a href="#">Autumn Collection</a></li>
+                                        <li><a href="#">Winter Collection</a></li>
+                                        <li><a href="#">Holiday Collection</a></li>
+                                        <li><a href="#">Outdoor Collection</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">공간별 컬렉션</a></h4>
+                                    <ul>
+                                        <li><a href="#">Living Room</a></li>
+                                        <li><a href="#">Bedroom</a></li>
+                                        <li><a href="#">Dining Room</a></li>
+                                        <li><a href="#">Home Office</a></li>
+                                        <li><a href="#">Kitchen</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">스타일 컬렉션</a></h4>
+                                    <ul>
+                                        <li><a href="#">Modern</a></li>
+                                        <li><a href="#">Minimal</a></li>
+                                        <li><a href="#">Scandinavian</a></li>
+                                        <li><a href="#">Natural</a></li>
+                                        <li><a href="#">Industrial</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">스페셜 컬렉션</a></h4>
+                                    <ul>
+                                        <li><a href="#">Signature</a></li>
+                                        <li><a href="#">Limited Edition</a></li>
+                                        <li><a href="#">Designer Choice</a></li>
+                                        <li><a href="#">New Collection</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">LOOKBOOK</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">공간 스타일링</a></h4>
+                                    <ul>
+                                        <li><a href="#">거실</a></li>
+                                        <li><a href="#">침실</a></li>
+                                        <li><a href="#">다이닝</a></li>
+                                        <li><a href="#">서재</a></li>
+                                        <li><a href="#">주방</a></li>
+                                        <li><a href="#">테라스</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">라이프 스타일</a></h4>
+                                    <ul>
+                                        <li><a href="#">신혼집</a></li>
+                                        <li><a href="#">1인 가구</a></li>
+                                        <li><a href="#">패밀리홈</a></li>
+                                        <li><a href="#">오피스</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">스타일</a></h4>
+                                    <ul>
+                                        <li><a href="#">모던</a></li>
+                                        <li><a href="#">북유럽</a></li>
+                                        <li><a href="#">미니멀</a></li>
+                                        <li><a href="#">럭셔리</a></li>
+                                        <li><a href="#">내츄럴</a></li>
+                                        <li><a href="#">빈티지</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">MAGAZINE</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">인테리어 매거진</a></h4>
+                                    <ul>
+                                        <li><a href="#">공간 연출</a></li>
+                                        <li><a href="#">컬러 가이드</a></li>
+                                        <li><a href="#">가구 배치</a></li>
+                                        <li><a href="#">트렌드</a></li>
+                                        <li><a href="#">조명 스타일링</a></li>
+                                        <li><a href="#">계절 인테리어</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">리빙 가이드</a></h4>
+                                    <ul>
+                                        <li><a href="#">홈카페</a></li>
+                                        <li><a href="#">홈오피스</a></li>
+                                        <li><a href="#">홈스타일링</a></li>
+                                        <li><a href="#">수납 노하우</a></li>
+                                        <li><a href="#">청소 팁</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">브랜드 스토리</a></h4>
+                                    <ul>
+                                        <li><a href="#">디자이너 인터뷰</a></li>
+                                        <li><a href="#">제작과정</a></li>
+                                        <li><a href="#">소재 이야기</a></li>
+                                        <li><a href="#">브랜드 뉴스</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                        <div class="gnb2depth">
+                            <div class="common-frame">
+                                <section>
+                                    <h4><a href="#">브랜드</a></h4>
+                                    <ul>
+                                        <li><a href="#">브랜드 소개</a></li>
+                                        <li><a href="#">브랜드 철학</a></li>
+                                        <li><a href="#">브랜드 히스토리</a></li>
+                                        <li><a href="#">디자이너</a></li>
+                                        <li><a href="#">브랜드 가치</a></li>
+                                        <li><a href="#">지속 가능성</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">서비스</a></h4>
+                                    <ul>
+                                        <li><a href="#">매장 안내</a></li>
+                                        <li><a href="#">배송 안내</a></li>
+                                        <li><a href="#">교환·반품</a></li>
+                                        <li><a href="#">고객센터</a></li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4><a href="#">커뮤니티</a></h4>
+                                    <ul>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">자주 묻는 질문</a></li>
+                                        <li><a href="#">리뷰</a></li>
+                                        <li><a href="#">문의하기</a></li>
+                                        <li><a href="#">이벤트</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 패드 / 모바일용 헤더 -->
+    <div class="smart-header">
+        <div class="common-frame">
+            <ul class="smart-actions" aria-label="빠른 메뉴">
+                <li><a href="#"><img src="./img/search-icon.svg" alt="검색"></a></li>
+                <li><a href="./login.html"><img src="./img/login-icon.svg" alt="로그인"></a></li>
+                <li><a href="./signup.html"><img src="./img/signup.svg" alt="회원가입"></a></li>
+                <li><a href="./product.html?view=cart"><img src="./img/cart.svg" alt="장바구니"></a></li>
+            </ul>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.svg" alt="LUMORA 로고 메인페이지로 이동">
+                </a>
+            </div>
+            <div class="btn-menu">
+                <a href="#">
+                    <img src="./img/Menu.svg" alt="전체메뉴 열기">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 패드 모바일용 전체 메가메뉴 -->
+    <div class="smart-overlay-menu">
+        <div class="smart-overlay-menu-1">
+            <div class="common-frame">
+                <div class="btn-menu-close">
+                    <a href="#">
+                        <img src="./img/lucide_arrow-up-left.svg" alt="전체메뉴 닫기">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-2">
+            <div class="common-frame">
+                <ul class="user-menu">
+                    <li>
+                        <a href="./login.html">
+                            <img src="./img/login-icon.svg" alt="로그인하기">
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./signup.html">
+                            <img src="./img/signup.svg" alt="회원가입하기">
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/search-icon.svg" alt="검색하기">
+                            <span>검색</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./product.html?view=cart">
+                            <img src="./img/cart.svg" alt="장바구니보기">
+                            <span>장바구니</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/my.svg" alt="마이페이지">
+                            <span>마이페이지</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="smart-overlay-menu-top">
+            <div class="common-frame">
+                <ul class="gnb-smart">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">COLLECTION</a></li>
+                    <li><a href="#">LOOKBOOK</a></li>
+                    <li><a href="#">MAGAZINE</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="smart-overlay-menu-bottom">
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4>신상품 전체</h4>
+                    </section>
+                    <section>
+                        <h4><a href="#">신상품 카테고리</a></h4>
+                        <ul>
+                            <li><a href="#">거실 신상품</a></li>
+                            <li><a href="#">침실 신상품</a></li>
+                            <li><a href="#">주방 신상품</a></li>
+                            <li><a href="#">홈데코 신상품</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>출시 일정</h4>
+                        <ul>
+                            <li><a href="#">오늘 입고</a></li>
+                            <li><a href="#">이번 주 신상품</a></li>
+                            <li><a href="#">이번 달 신상품</a></li>
+                            <li><a href="#">프리오더</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>신상품 기획전</h4>
+                        <ul>
+                            <li><a href="#">MD 추천 신상품</a></li>
+                            <li><a href="#">단독 출시</a></li>
+                            <li><a href="#">한정판</a></li>
+                            <li><a href="#">NEW ARRIVAL</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4>베스트 카테고리</h4>
+                        <ul>
+                            <li><a href="#">소파 BEST</a></li>
+                            <li><a href="#">침대 BEST</a></li>
+                            <li><a href="#">의자 BEST</a></li>
+                            <li><a href="#">조명 BEST</a></li>
+                            <li><a href="#">테이블 BEST</a></li>
+                            <li><a href="#">수납가구 BEST</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>인기순위</h4>
+                        <ul>
+                            <li><a href="#">TOP 10</a></li>
+                            <li><a href="#">TOP 50</a></li>
+                            <li><a href="#">실시간 인기</a></li>
+                            <li><a href="#">고객 추천</a></li>
+                            <li><a href="#">금주 인기</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>베스트 기획전</h4>
+                        <ul>
+                            <li><a href="#">MD 추천</a></li>
+                            <li><a href="#">신혼 추천</a></li>
+                            <li><a href="#">자취 추천</a></li>
+                            <li><a href="#">프리미엄 컬렉션</a></li>
+                            <li><a href="#">금주 인기</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4> 컬렉션</h4>
+                    </section>
+                    <section>
+                        <h4>시즌 컬렉션</h4>
+                        <ul>
+                            <li><a href="#">Spring Collection</a></li>
+                            <li><a href="#">Summer Collection</a></li>
+                            <li><a href="#">Autumn Collection</a></li>
+                            <li><a href="#">Winter Collection</a></li>
+                            <li><a href="#">Holiday Collection</a></li>
+                            <li><a href="#">Outdoor Collection</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>공간별 컬렉션</h4>
+                        <ul>
+                            <li><a href="#">Living Room</a></li>
+                            <li><a href="#">Bedroom</a></li>
+                            <li><a href="#">Dining Room</a></li>
+                            <li><a href="#">Home Office</a></li>
+                            <li><a href="#">Kitchen</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>스타일 컬렉션</h4>
+                        <ul>
+                            <li><a href="#">Modern</a></li>
+                            <li><a href="#">Minimal</a></li>
+                            <li><a href="#">Scandinavian</a></li>
+                            <li><a href="#">Natural</a></li>
+                            <li><a href="#">Industrial</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>스페셜 컬렉션</h4>
+                        <ul>
+                            <li><a href="#">Signature</a></li>
+                            <li><a href="#">Limited Edition</a></li>
+                            <li><a href="#">Designer Choice</a></li>
+                            <li><a href="#">New Collection</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4>스타일링</h4>
+                    </section>
+                    <section>
+                        <h4>공간 스타일링</h4>
+                        <ul>
+                            <li><a href="#">거실</a></li>
+                            <li><a href="#">침실</a></li>
+                            <li><a href="#">다이닝</a></li>
+                            <li><a href="#">서재</a></li>
+                            <li><a href="#">주방</a></li>
+                            <li><a href="#">테라스</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>라이프 스타일</h4>
+                        <ul>
+                            <li><a href="#">신혼집</a></li>
+                            <li><a href="#">1인 가구</a></li>
+                            <li><a href="#">패밀리홈</a></li>
+                            <li><a href="#">오피스</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>스타일</h4>
+                        <ul>
+                            <li><a href="#">모던</a></li>
+                            <li><a href="#">북유럽</a></li>
+                            <li><a href="#">미니멀</a></li>
+                            <li><a href="#">럭셔리</a></li>
+                            <li><a href="#">내츄럴</a></li>
+                            <li><a href="#">빈티지</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4>전체 콘텐츠</h4>
+                    </section>
+                    <section>
+                        <h4>인테리어 매거진</h4>
+                        <ul>
+                            <li><a href="#">공간 연출</a></li>
+                            <li><a href="#">컬러 가이드</a></li>
+                            <li><a href="#">가구 배치</a></li>
+                            <li><a href="#">트렌드</a></li>
+                            <li><a href="#">조명 스타일링</a></li>
+                            <li><a href="#">계절 인테리어</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>리빙 가이드</h4>
+                        <ul>
+                            <li><a href="#">홈카페</a></li>
+                            <li><a href="#">홈오피스</a></li>
+                            <li><a href="#">홈스타일링</a></li>
+                            <li><a href="#">수납 노하우</a></li>
+                            <li><a href="#">청소 팁</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>브랜드 스토리</h4>
+                        <ul>
+                            <li><a href="#">디자이너 인터뷰</a></li>
+                            <li><a href="#">제작과정</a></li>
+                            <li><a href="#">소재 이야기</a></li>
+                            <li><a href="#">브랜드 뉴스</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="gnb2depth-smart">
+                <div class="common-frame">
+                    <section>
+                        <h4>LUMORA STORY</h4>
+                    </section>
+                    <section>
+                        <h4>브랜드</h4>
+                        <ul>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">브랜드 철학</a></li>
+                            <li><a href="#">브랜드 히스토리</a></li>
+                            <li><a href="#">디자이너</a></li>
+                            <li><a href="#">브랜드 가치</a></li>
+                            <li><a href="#">지속 가능성</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>서비스</h4>
+                        <ul>
+                            <li><a href="#">매장 안내</a></li>
+                            <li><a href="#">배송 안내</a></li>
+                            <li><a href="#">교환·반품</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>커뮤니티</h4>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">리뷰</a></li>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main>
+        <!-- 히어로배너 슬라이드 -->
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class='pc' src="./img/heropc1.jpg" alt="당신의 공간에 오래 머무를 아름다움.">
+                    <img class='pad' src="./img/heropad1.jpg" alt="당신의 공간에 오래 머무를 아름다움.">
+                    <img class='mo' src="./img/heromo1 .jpg" alt="당신의 공간에 오래 머무를 아름다움.">
+                </div>
+                <div class="swiper-slide">
+                    <img class='pc' src="./img/heropc1.jpg" alt="공간에 자연스럽게 스며들어 당신의 일상을 특별하게 만드는 가구">
+                    <img class='pad' src="./img/heropad2.jpg" alt="공간에 자연스럽게 스며들어 당신의 일상을 특별하게 만드는 가구">
+                    <img class='mo' src="./img/heromo2 .jpg" alt="공간에 자연스럽게 스며들어 당신의 일상을 특별하게 만드는 가구">
+                </div>
+                <div class="swiper-slide">
+                    <img class='pc' src="./img/heropc3.jpg" alt="LUMORA 2026 Collection">
+                    <img class='pad' src="./img/heropad3.jpg" alt="LUMORA 2026 Collection">
+                    <img class='mo' src="./img/heromo3.jpg" alt="LUMORA 2026 Collection">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- 공지사항 띠배너 -->
+        <div class="banner-line">
+            <div class="common-frame">
+                <span>IMPORTANT NOTICE </span>
+                <h4>LUMORA의 최신 공지사항과 변경된 내용을 확인하실 수 있습니다.</h4>
+                <a href="#" class="btn-style">VIEW ALL <img src="./img/formkit_arrowright.svg" alt="공지사항 바로가기"></a>
+            </div>
+        </div>
+
+        <!-- Section 1: Timeless Pieces -->
+        <section class="con1">
+            <div class="common-frame">
+                <div class="title">
+                    <h1>Timeless Pieces by <span class="highlight">LUMORA</span></h1>
+                    <span></span>
+                    <p>일상에 자연스럽게 스며드는 LUMORA의 가구</p>
+                </div>
+                <div class="swiper cardlist-wrap">
+                    <ul class="cardlist swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="./list.html">
+                                <div class="cover">Bed</div>
+                                <img src="./img/1.jpg" alt="living room">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="./list.html">
+                                <div class="cover">Sofa</div>
+                                <img src="./img/2.jpg" alt="DINING room">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="./list.html">
+                                <div class="cover">Chair</div>
+                                <img src="./img/3.jpg" alt="KITCHEN">
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="./list.html">
+                                <div class="cover">Shelf Table</div>
+                                <img src="./img/4.jpg" alt="BED room">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 공간에 담긴 LUMORA -->
+        <section class="con2">
+            <div class="common-frame">
+                <div class="title">
+                    <h1>공간에 담긴 LUMORA </h1>
+                    <span></span>
+                    <p>일상에 자연스럽게 스며드는 아름다움.<br>LUMORA는 공간에 삶을 위한 가구를 디자인합니다.</p>
+                </div>
+                <div class="swiper review-story-wrap">
+                    <ul class="review-story swiper-wrapper">
+                        <li class="swiper-slide">
+                            <figure>
+                                <img src="./img/c1-1.jpg" alt="윤정님 스토리 섬네일">
+                            </figure>
+                            <div class="story-txt">
+                                <div class="stars">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                </div>
+                                <h4>윤정님과 함께한 루모라</h4>
+                                <p>안방 침실을 정리하면서 가장 고민했었던 침대🛏️   처음에는 LK 사이즈 침대를 고민했지만 안방 공간을 직접 재보니 침대가 너무 꽉 차 보일 것 같아 공간 여유를 두고 사용하고 싶어 Q/K 겸용 프레임으로 선택하게 되었어요.</p>
+                            </div>
+                            <div class="story-product">
+                                <a href="#">
+                                    <figure>
+                                        <img src="./img/c1-1-1.jpg" alt="말름 높은침대프레임, 화이트">
+                                        <span class="story-likes" aria-label="좋아요 85개"><img src="./img/heart.svg" alt="">85</span>
+                                    </figure>
+                                    <div class="story-product-txt">
+                                        <div class="product-name">
+                                            말름 높은침대프레임, 화이트
+                                        </div>
+                                        <div class="product-category">
+                                            침대
+                                        </div>
+                                        <div class="pay-original">
+                                            <span>100,000</span>원
+                                        </div>
+                                        <div class="pay-discount">
+                                            <div class="discount">30%</div>
+                                            <div class="pay"><b>70,000</b>원</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure>
+                                <img src="./img/c1-4.jpg" alt="재은님 스토리 섬네일">
+                            </figure>
+                            <div class="story-txt">
+                                <div class="stars">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                </div>
+                                <h4>재은님과 함께한 루모라</h4>
+                                <p>저희 집에서 가장 만족하는 건 사각 싱크볼과 냉장고장이에요.사각 싱크볼은 사용하기 편할 뿐만 아니라 주방을 더욱 깔끔하게 만들어주고, 냉장고장은 빌트인처럼 자연스럽게 어우러져 공간 전체가 한층 정돈된 느낌을 주더라고요.</p>
+                            </div>
+                            <div class="story-product">
+                                <a href="#">
+                                    <figure>
+                                        <img src="./img/c1-4-1.jpg" alt="테이블, 물푸레무늬목">
+                                        <span class="story-likes" aria-label="좋아요 33개"><img src="./img/heart.svg" alt="">33</span>
+                                    </figure>
+                                    <div class="story-product-txt">
+                                        <div class="product-name">
+                                            테이블, 물푸레무늬목
+                                        </div>
+                                        <div class="product-category">
+                                            테이블
+                                        </div>
+                                        <div class="pay-original">
+                                            <span>100,000</span>원
+                                        </div>
+                                        <div class="pay-discount">
+                                            <div class="discount">30%</div>
+                                            <div class="pay"><b>70,000</b>원</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure>
+                                <img src="./img/c1-2.jpg " alt="도윤님 스토리 섬네일">
+                            </figure>
+                            <div class="story-txt">
+                                <div class="stars">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                </div>
+                                <h4>도윤님과 함께한 루모라</h4>
+                                <p>집에서 가장 생산적인 시간을 보내는 곳👩‍💻   바닥에 데코타일을 깔고나니 분위가 차분해졌다. 블랙무드로 꾸며보는 블랙데스크테리어,</p>
+                            </div>
+                            <div class="story-product">
+                                <a href="#">
+                                    <figure>
+                                        <img src="./img/c1-2-1.jpg" alt="마르쿠스 사무용의자, 비슬레 다크그레이">
+                                        <span class="story-likes" aria-label="좋아요 53개"><img src="./img/heart.svg" alt="">53</span>
+                                    </figure>
+                                    <div class="story-product-txt">
+                                        <div class="product-name">
+                                            마르쿠스 사무용의자, 비슬레 다크그레이
+                                        </div>
+                                        <div class="product-category">
+                                            Home Office
+                                        </div>
+                                        <div class="pay-original">
+                                            <span>100,000</span>원
+                                        </div>
+                                        <div class="pay-discount">
+                                            <div class="discount">30%</div>
+                                            <div class="pay"><b>70,000</b>원</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <figure>
+                                <img src="./img/c1-3.jpg" alt="주영님 스토리 섬네일">
+                            </figure>
+                            <div class="story-txt">
+                                <div class="stars">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                    <img src="./img/star.svg" alt="좋아요 별">
+                                </div>
+                                <h4>주영님과 함께한 루모라</h4>
+                                <p>베이지와 포레스트 그린 컬러의 조합이 정말 매력적이어서 보기만 해도     따뜻해지는 느낌이에요. 모던한 그리드 패턴은 과하지 않으면서도 포인트가 되어주고, 부드러운 촉감과 탄탄한 마감까지 더해져 첫인상부터 만족스러웠어요.</p>
+                            </div>
+                            <div class="story-product">
+                                <a href="#">
+                                    <figure>
+                                        <img src="./img/c1-3-1.jpg" alt="베스토 수납장 유닛, 화이트">
+                                        <span class="story-likes" aria-label="좋아요 71개"><img src="./img/heart.svg" alt="">71</span>
+                                    </figure>
+                                    <div class="story-product-txt">
+                                        <div class="product-name">
+                                            베스토 수납장 유닛, 화이트
+                                        </div>
+                                        <div class="product-category">
+                                            수납장
+                                        </div>
+                                        <div class="pay-original">
+                                            <span>100,000</span>원
+                                        </div>
+                                        <div class="pay-discount">
+                                            <div class="discount">30%</div>
+                                            <div class="pay"><b>70,000</b>원</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: LUMORA Exclusive Sale -->
+        <section class="con3">
+            <div class="common-frame">
+                <div class="title">
+                    <h1><span class="highlight">LUMORA</span> Exclusive Sale</h1>
+                    <span></span>
+                    <p>특별한 가격으로 만나는 LUMORA의 베스트 셀렉션</p>
+                </div>
+                
+                <ul class="sale-product-grid">
+                    <!-- 상품 1 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/11.jpg" alt="LUMORA Arco Dining Table">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Arco Dining Table</h3>
+                                <p>자연스러운 우드결이 돋보이는 다이닝 테이블<br>일상의 식사와 시간을 더욱 특별하게 만들어줍니다</p>
+                                <div class="price-wrap">
+                                    <del>950,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">16%</span>
+                                        <b class="final">798,500</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 84
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 상품 2 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/22.jpg" alt="LUMORA Nove Sofa">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Nove Sofa</h3>
+                                <p>부드러운 곡선과 깊은 착석감으로 완성한 소파<br>차분한 공간에 자연스럽게 어우러지는 디자인</p>
+                                <div class="price-wrap">
+                                    <del>1,290,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">20%</span>
+                                        <b class="final">1,032,000</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 86
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 상품 3 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/33.jpg" alt="LUMORA Line Office Chair">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Line Office Chair</h3>
+                                <p>깔끔한 실루엣과 편안한 착석감을 갖춘 오피스 체어<br>집중이 필요한 순간에도 단정한 공간을 연출해줍니다</p>
+                                <div class="price-wrap">
+                                    <del>460,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">20%</span>
+                                        <b class="final">368,000</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 135
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 상품 4 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/44.jpg" alt="LUMORA Miro Side Table">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Miro Side Table</h3>
+                                <p>정제된 실루엣과 은은한 소재감의 사이드 테이블<br>침실과 거실 어디에나 자연스럽게 어울립니다</p>
+                                <div class="price-wrap">
+                                    <del>345,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">18%</span>
+                                        <b class="final">282,400</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 57
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 상품 5 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/55.jpg" alt="LUMORA Elin Lounge Chair">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Elin Lounge Chair</h3>
+                                <p>편안한 곡선과 포근한 소재로 완성한 라운지 체어<br>독서와 휴식을 위한 여유로운 공간을 만들어보세요</p>
+                                <div class="price-wrap">
+                                    <del>520,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">25%</span>
+                                        <b class="final">390,000</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 92
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 상품 6 -->
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/66.jpg" alt="LUMORA Sera Bed">
+                            </figure>
+                            <div class="txt-wrap">
+                                <h3>LUMORA Sera Bed</h3>
+                                <p>차분한 곡선과 포근한 패브릭이 어우러진 침대<br>완전한 휴식과 고요한 분위기를 완성합니다</p>
+                                <div class="price-wrap">
+                                    <del>1,100,000원</del>
+                                    <div class="sale-price">
+                                        <span class="percent">24%</span>
+                                        <b class="final">836,000</b>원
+                                    </div>
+                                </div>
+                                <div class="like-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#d13030" stroke="#d13030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg> 71
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="footer-top">
+            <div class="common-frame f-pad">
+                <ul class="f-nav">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#" class="bold">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">사업자정보확인</a></li>
+                </ul>
+                <div class="sns-icons">
+                    <!-- 유튜브 아이콘 (SVG) -->
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <!-- 인스타그램 아이콘 (SVG) -->
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="common-frame f-pad">
+                <div class="f-main-wrap">
+                    <!-- 왼쪽: 회사 정보 그리드 -->
+                    <div class="company-info">
+                        <div class="info-grid">
+                            <span class="label">회사명</span> 
+                            <p class="value">(주)LUMORA<br>LUMORA Furniture Co. Ltd.</p>
+                            
+                            <span class="label">대표</span> 
+                            <p class="value">백민선</p>
+                            
+                            <span class="label">사업자등록번호</span> 
+                            <p class="value">111-11-11111</p>
+                            
+                            <span class="label">통신판매업신고</span> 
+                            <p class="value">제2026-서울포트폴리오-1162호</p>
+                            
+                            <span class="label">주소</span> 
+                            <p class="value">서울특별시 강남구 포트폴리오로 328, LUMORA BUILDING 8F</p>
+                            
+                            <span class="label">대표번호</span> 
+                            <p class="value">1588-2048</p>
+                            
+                            <span class="label">이메일</span> 
+                            <p class="value">mmmms@lumora.com</p>
+                            
+                            <span class="label">개인정보관리책임자</span> 
+                            <p class="value">백민선</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 오른쪽: 브랜드 로고 및 텍스트 -->
+                    <div class="footer-brand">
+                        <!-- 임시 텍스트 로고 (흰색) -->
+                        <div class="f-logo">
+                            <img src="./img/logo-dark.svg" alt="LUMORA 로고">
+                        </div>
+                        <p>일상에 자연스럽게 스며드는 아름다움.<br>LUMORA는 공간에 삶을 위한 가구를 디자인합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 중앙 하단: 고객센터 -->
+                <div class="cs-center">
+                    <h2>고객센터 1588-2048</h2>
+                    <div class="cs-time">
+                        <div class="time-row"><span>평일</span> <p>09:30 - 18:00</p></div>
+                        <div class="time-row"><span>점심시간</span> <p>12:30 - 13:30</p></div>
+                        <div class="holiday">토·일 공휴일 휴무</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 최하단 카피라이트 -->
+            <div class="copyright">
+                <div class="common-frame f-pad">
+                    &copy; 2026 <b>LUMORA</b> Furniture. All Rights Reserved. 취업용도의 포트폴리오 홈페이지입니다.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

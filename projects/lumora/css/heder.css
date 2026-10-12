@@ -1,0 +1,179 @@
+/* =========================================
+   PC / 모바일 헤더 노출 분기 및 메가 메뉴 스타일
+========================================= */
+/* =========================================
+   헤더 상단 레이아웃 및 디자인 (PC)
+========================================= */
+
+/* 1. 기본 리스트 및 링크 스타일 초기화 */
+header.pc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header.pc a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 2. 헤더 전체 배경색 (시안의 베이지톤) */
+header.pc {
+    background-color: #FCF8EE; /* 배경색은 필요에 따라 약간 수정하세요 */
+}
+
+/* 3. 상단 영역 (로고 & 우측 메뉴) 양끝 배치 */
+.header-top .common-frame {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 밀어내기 */
+    align-items: center;            /* 세로 중앙 정렬 */
+    padding: 25px 0 10px;           /* 상하 여백 조정 */
+}
+
+/* 4. 로고 크기 조정 */
+.header-top .logo img {
+    height: 76px; /* 스크린샷처럼 로고 크기를 적당하게 조절 */
+}
+
+/* 5. 우측 유저 메뉴 (가로 배치) */
+.user-menu {
+    display: flex;
+    gap: 20px; /* 아이콘 사이 간격 */
+    align-items: center;
+}
+
+/* 6. 유저 메뉴 안의 아이콘과 글자 (세로 배치) */
+.user-menu li a {
+    display: flex;
+    flex-direction: column; /* 아이콘 위, 글자 아래 */
+    align-items: center;    /* 가운데 정렬 */
+    gap: 6px;               /* 아이콘과 글자 사이 간격 */
+    font-size: 11px;        /* 글자 크기 작게 */
+    font-weight: 500;
+}
+
+/* 유저 메뉴 아이콘 크기 제어 */
+.user-menu li a img {
+    width: 22px;
+    height: 22px;
+}
+
+/* 7. 하단 메인 메뉴(GNB) 영역 여백 */
+.header-bottom {
+    position: relative; /* 메가 메뉴가 넓게 펼쳐질 수 있도록 기준점 추가 */
+}
+.header-bottom .common-frame {
+    padding-bottom: 5px;
+}
+
+/* =========================================
+   GNB 메인 메뉴 및 2Depth 메가 메뉴 패널
+========================================= */
+
+/* GNB 기본 스타일 및 리스트 가로 정렬 */
+.pc .gnb {
+    display: flex;
+    gap: 40px;
+}
+.pc .gnb > li {
+    /* 원래 있던 position: relative; 삭제 (메뉴가 밖으로 튕겨나가는 원인) */
+    padding: 20px 0;
+}
+
+/* 메뉴 호버 시 아래 밑줄 애니메이션 (스크린샷 참고) */
+.pc .gnb > li > a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    padding-bottom: 5px;
+}
+.pc .gnb > li:hover > a {
+    color: #e5b550; /* 시안과 유사한 밝은 머스타드 색상 */
+}
+.pc .gnb > li:hover > a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e5b550;
+}
+
+/* 2Depth 메가 메뉴 패널 (기본 숨김) */
+.pc .gnb2depth {
+    position: absolute;
+    top: 100%;
+    left: 0;         /* 50%에서 0으로 변경 (화면 왼쪽 끝부터 시작) */
+    width: 100%;     /* 100vw 대신 100% 사용 */
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    z-index: 999;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* 마우스 호버 시 메가 메뉴 나타남 */
+.pc .gnb > li:hover .gnb2depth {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 메가 메뉴 내부 레이아웃 */
+.pc .gnb2depth .common-frame {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* 각 카테고리 섹션 스타일 */
+.pc .gnb2depth section {
+    min-width: 180px; /* 섹션 넓이를 여유 있게 설정 */
+}
+.pc .gnb2depth section h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd; /* 얇은 회색 밑줄 */
+}
+.pc .gnb2depth section h4 a {
+    color: #000;
+}
+.pc .gnb2depth section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* 세부 메뉴 상하 간격 넓힘 */
+}
+.pc .gnb2depth section ul li a {
+    font-size: 13px;
+    color: #333;
+    transition: color 0.2s;
+}
+.pc .gnb2depth section ul li a:hover {
+    color: #e5b550; /* 호버 시 색상 변경 */
+    font-weight: bold;
+}
+
+/* =========================================
+   PC/모바일 헤더 노출 분기
+========================================= */
+.smart-header,
+.smart-overlay-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    header.pc {
+        display: none;
+    }
+    .smart-header {
+        display: block;
+    }
+}

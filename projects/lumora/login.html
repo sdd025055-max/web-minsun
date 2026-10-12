@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 | LUMOLA</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/auth.css">
+  <script src="./js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-panel">
+    <a class="auth-logo" href="./index.html"><img src="./img/logo.svg" alt="LUMOLA 메인페이지로 이동" width="285" height="100"></a>
+    <h1>로그인</h1>
+    <p class="auth-intro">당신의 공간을 위한 새로운 시작</p>
+    <form id="login-form" novalidate>
+      <div class="auth-field"><label for="identity">아이디 또는 이메일</label><input id="identity" name="identity" autocomplete="username" placeholder="아이디 또는 이메일을 입력해주세요" required aria-describedby="auth-message"></div>
+      <div class="auth-field"><label for="password">비밀번호</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="비밀번호를 입력해주세요" required aria-describedby="auth-message"></div>
+      <div class="auth-options"><label class="auth-check"><input id="remember" name="remember" type="checkbox">로그인 유지</label><button class="auth-text" type="button" data-auth-help="password">비밀번호 찾기</button></div>
+      <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
+      <button class="auth-submit" type="submit">로그인</button>
+    </form>
+    <div class="auth-links"><a href="./signup.html">회원가입</a><button class="auth-text" type="button" data-auth-help="identity">아이디/이메일 찾기</button></div>
+    <div class="auth-social"><p>간편 로그인</p><div><button type="button" data-auth-help="naver" aria-label="네이버 간편 로그인"><img src="./img/logo-naver.png" alt="네이버 로그인"></button><button type="button" data-auth-help="kakao" aria-label="카카오 간편 로그인"><img src="./img/logo-kakao.png" alt="카카오 로그인"></button><button type="button" data-auth-help="google" aria-label="Google 간편 로그인"><img src="./img/logo-google.png" alt="Google 로그인"></button><button type="button" data-auth-help="apple" aria-label="Apple 간편 로그인"><img src="./img/logo-apple.png" alt="Apple 로그인"></button></div></div>
+    <p class="auth-note">포트폴리오용 로그인 체험입니다. 실제 계정 인증은 진행되지 않습니다.</p>
+    <a class="auth-home" href="./index.html">쇼핑몰로 돌아가기</a>
+  </main>
+</body>
+</html>

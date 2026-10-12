@@ -50,6 +50,10 @@
   text-align: left;
 }
 
+.project-design-system.project-design-system--geulgil {
+  background-color: #e5e2f3;
+}
+
 .project-design-system,
 .project-design-system * { box-sizing: border-box; }
 

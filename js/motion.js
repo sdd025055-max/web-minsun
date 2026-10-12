@@ -7,6 +7,7 @@
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const pending = new Set();
   const running = new Map();
+  const repeatable = new Set();
   const $all = (selector) => [...document.querySelectorAll(selector)];
   const finish = (element) => {
     element.classList.remove('is-motion-pending', 'is-motion-running');
@@ -16,7 +17,7 @@
   };
   const reveal = (element) => {
     if (!pending.has(element)) return;
-    observer.unobserve(element);
+    if (!repeatable.has(element)) observer.unobserve(element);
     element.classList.remove('is-motion-pending');
     element.classList.add('is-motion-running');
     pending.delete(element);
@@ -26,12 +27,19 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(({ target, isIntersecting }) => {
       if (isIntersecting) reveal(target);
+      else if (repeatable.has(target) && !reduced.matches && !target.contains(document.activeElement)) {
+        finish(target);
+        target.classList.add('is-motion-pending');
+        pending.add(target);
+      }
     });
   }, { threshold: 0, rootMargin: '0px 0px -32px 0px' });
 
   function prepare(element, className) {
     element.classList.add(className);
+    if (className !== 'motion-image') repeatable.add(element);
     if (reduced.matches) return;
+    if (repeatable.has(element)) observer.observe(element);
     // Deep links and the initial viewport must remain immediately readable.
     if (element.getBoundingClientRect().top < innerHeight) return;
     element.classList.add('is-motion-pending');
@@ -72,7 +80,10 @@
   // Focusing a button or following an in-page link must never target hidden content.
   document.addEventListener('focusin', (event) => {
     for (const element of pending) {
-      if (element.contains(event.target) || event.target.contains(element)) { observer.unobserve(element); finish(element); }
+      if (element.contains(event.target) || event.target.contains(element)) {
+        if (!repeatable.has(element)) observer.unobserve(element);
+        finish(element);
+      }
     }
   });
 
@@ -144,6 +155,8 @@
       frame = 0;
       yarns.forEach((element) => ['--yarn-x', '--yarn-y', '--yarn-angle', '--yarn-scale'].forEach((property) => element.style.removeProperty(property)));
       rabbits.forEach((element) => element.classList.remove('is-peeking'));
+    } else {
+      repeatable.forEach((element) => observer.observe(element));
     }
     marquees.forEach((element) => element.classList.toggle('is-in-view', !reduced.matches && active.has(element)));
     requestTick();
