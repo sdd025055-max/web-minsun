@@ -145,7 +145,8 @@
 }
 
 .motion-rabbit--career {
-  left: clamp(24px, 4vw, 72px);
+    left: clamp(24px, 4vw, 72px);
+    top: clamp(-100px,-20vw,-380px);
 }
 
 .motion-rabbit__peek {

@@ -996,10 +996,11 @@ button {
 }
 
 .poster-project__number {
-  margin-bottom: 20px;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #ff7eb8;
 }
 
 .poster-project__copy h3 {
@@ -2184,17 +2185,13 @@ section {
 
 
 .contact__links a {
-  padding:
-    17px 25px;
-
-  border:
-    1px solid var(--ink);
-
-  border-radius: 100px;
-
-  transition:
-    background 0.2s ease,
+    padding: 17px 25px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    transition: background 0.2s ease,
     color 0.2s ease;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 
@@ -2721,12 +2718,15 @@ section.Section2>div.Section3 {
 }
 
 .section-nav {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  background: #ff7eb8;
-  color: #252029;
-  font-family: 'Pretendard', Arial, sans-serif;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    background: #ff7eb8;
+    color: #252029;
+    font-family: 'Pretendard', Arial, sans-serif;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 .section-nav__inner {
@@ -2753,10 +2753,12 @@ section.Section2>div.Section3 {
 }
 
 .section-nav__links a {
-  padding: 7px 0;
-  font-size: 12px;
-  line-height: 1;
-  transition: opacity 160ms ease;
+    padding: 7px 0;
+    font-size: 12px;
+    line-height: 1;
+    transition: opacity 160ms ease;
+    font-weight: 600;
+    color: #454545;
 }
 
 .section-nav__links a:hover {
@@ -2764,20 +2766,21 @@ section.Section2>div.Section3 {
 }
 
 .section-nav__resume {
-  flex: none;
-  padding: 5px 16px;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  transition: background 160ms ease, color 160ms ease;
+    flex: none;
+    padding: 5px 16px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    transition: background 160ms ease, color 160ms ease;
+    color: #454545;
 }
 
 .section-nav__resume:hover {
-  background: #252029;
-  color: #fff;
+    background: #454545;
+    color: #fff;
 }
 
 .section-nav a:focus-visible {
